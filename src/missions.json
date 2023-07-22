@@ -96,7 +96,7 @@
     "description": "Bring a generator home."
   },
   {
-    "name": "Brew Master",
+    "name": "Brew Prodigy",
     "description": "Consume 5 different types of alcoholic beverages."
   },
   {
@@ -108,7 +108,7 @@
     "description": "Cultivate a garden with at least 3 different crops."
   },
   {
-    "name": "Master Chef",
+    "name": "Executive Chef",
     "description": "Prepare a meal consisting of 5 different fresh ingredients."
   },
   {
@@ -132,7 +132,7 @@
     "description": "Kill a zombie with a blade stuck in them (knife, katana, etc)."
   },
   {
-    "name": "Master Plumber",
+    "name": "Plumber's Crack",
     "description": "Plumb a sink."
   },
   {
@@ -150,5 +150,17 @@
   {
     "name": "Late-Night Reading",
     "description": "Sleep in a bed with HottieZ and tissues in the bedside table."
+  },
+  {
+    "name": "Doomsday Prepper",
+    "description": "Gather and store 100 units of non-perishable food (canned goods, dry pasta, etc.) in your safehouse."
+  },
+  {
+    "name": "Ace Trapper",
+    "description": "Set up and successfully catch three different types of animals in traps (snares or cage traps)."
+  },
+  {
+    "name": "Fishing Virtuoso",
+    "description": "Catch 3 fish types (bass, catfish, crappie, etc.)."
   }
 ]
