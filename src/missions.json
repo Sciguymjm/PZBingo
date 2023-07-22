@@ -1,0 +1,154 @@
+[
+  {
+    "name": "Spiffo's Pilgrimage",
+    "description": "Visit a Spiffo's."
+  },
+  {
+    "name": "Mirror, Mirror...",
+    "description": "Kill zombie you."
+  },
+  {
+    "name": "A Spoonful of Medicine",
+    "description": "Heal from a sickness."
+  },
+  {
+    "name": "Zombie Picasso",
+    "description": "Draw a smiley face."
+  },
+  {
+    "name": "Blast from the Past",
+    "description": "Make a bomb."
+  },
+  {
+    "name": "Radio Enthusiast",
+    "description": "Hold 7 radios at once."
+  },
+  {
+    "name": "Under the Stars",
+    "description": "Build a tent."
+  },
+  {
+    "name": "Sharpshooter",
+    "description": "Get a rifle."
+  },
+  {
+    "name": "Survivalist Streak",
+    "description": "Survive 7 days."
+  },
+  {
+    "name": "Pedal to the Metal",
+    "description": "Drive for at least 5 seconds."
+  },
+  {
+    "name": "Bathroom Breaker",
+    "description": "Disassemble a bathroom."
+  },
+  {
+    "name": "Axe Collector",
+    "description": "Get a non-stone axe."
+  },
+  {
+    "name": "Socks Galore",
+    "description": "Carry 50 pairs of socks at once."
+  },
+  {
+    "name": "Camouflaged Commando",
+    "description": "Wear a full military outfit."
+  },
+  {
+    "name": "Cartographer's Dream",
+    "description": "Get every map (14 total)."
+  },
+  {
+    "name": "Zombie Slayer",
+    "description": "1000 kills."
+  },
+  {
+    "name": "Mechanic's Workshop",
+    "description": "Take apart a car."
+  },
+  {
+    "name": "Skillful Progress",
+    "description": "Get 7 in a skill."
+  },
+  {
+    "name": "Smashing Success",
+    "description": "Find a sledgehammer."
+  },
+  {
+    "name": "Tiny Home Builder",
+    "description": "Build a house (can be 1x1)."
+  },
+  {
+    "name": "Angler's Delight",
+    "description": "Fish a fish."
+  },
+  {
+    "name": "Top Gun Style",
+    "description": "Wear aviators."
+  },
+  {
+    "name": "Bacon Stir Fry Feast",
+    "description": "Eat an entire bacon stir fry."
+  },
+  {
+    "name": "Generator Guru",
+    "description": "Bring a generator home."
+  },
+  {
+    "name": "Brew Master",
+    "description": "Consume 5 different types of alcoholic beverages."
+  },
+  {
+    "name": "Silent Assassin",
+    "description": "Kill 10 zombies with stealth kills."
+  },
+  {
+    "name": "Green Thumb",
+    "description": "Cultivate a garden with at least 3 different crops."
+  },
+  {
+    "name": "Master Chef",
+    "description": "Prepare a meal consisting of 5 different fresh ingredients."
+  },
+  {
+    "name": "Collector's Pride",
+    "description": "Amass a collection of 50 unique items, such as books, paintings, toys, etc."
+  },
+  {
+    "name": "Toxic Taste Test",
+    "description": "Drink bleach."
+  },
+  {
+    "name": "Engineer's Handbook",
+    "description": "Find a generator magazine."
+  },
+  {
+    "name": "Key to the Ride",
+    "description": "Find a car with the key inside."
+  },
+  {
+    "name": "Stuck in Style",
+    "description": "Kill a zombie with a blade stuck in them (knife, katana, etc)."
+  },
+  {
+    "name": "Master Plumber",
+    "description": "Plumb a sink."
+  },
+  {
+    "name": "Speed Demon",
+    "description": "Reach 80mph."
+  },
+  {
+    "name": "Survivor's Resilience",
+    "description": "Survive 4 lacerations."
+  },
+  {
+    "name": "Sole Catcher",
+    "description": "Catch a shoe while fishing."
+  },
+  {
+    "name": "Late-Night Reading",
+    "description": "Sleep in a bed with HottieZ and tissues in the bedside table."
+  }
+]
