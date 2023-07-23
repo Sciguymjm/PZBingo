@@ -48,6 +48,10 @@
     "description": ""
   },
   {
+    "name": "Wear a piece of police clothing.",
+    "description": ""
+  },
+  {
     "name": "Get every map (14 total).",
     "description": ""
   },
@@ -84,11 +88,11 @@
     "description": ""
   },
   {
-    "name": "Consume 5 different types of alcoholic beverages.",
+    "name": "Consume an alcoholic beverage.",
     "description": ""
   },
   {
-    "name": "Kill 10 zombies with stealth kills.",
+    "name": "Kill a zombie with a stealth kill.",
     "description": ""
   },
   {
@@ -184,8 +188,20 @@
     "description": ""
   },
   {
-    "name": "Never use a handheld container.",
-    "description": "Briefcases, bags, coolers, lunchboxes."
+    "name": "Never eat canned food.",
+    "description": ""
+  },
+  {
+    "name": "Never eat canned food.",
+    "description": ""
+  },
+  {
+    "name": "Cover every window in a house with sheets.",
+    "description": ""
+  },
+  {
+    "name": "Never hold a handheld container.",
+    "description": "Briefcases, bags, coolers, lunchboxes, etc."
   },
   {
     "name": "Set off a house alarm.",

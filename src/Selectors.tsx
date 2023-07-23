@@ -52,7 +52,7 @@ export interface Options {
 
 export const DEFAULT_OPTIONS: Options = {
   excludeNever: false,
-  numberOfItems: 5,
+  numberOfItems: 10,
   numberOfLocations: 10,
   freeSpace: false,
 };
@@ -65,7 +65,7 @@ export function OptionSelector(props: {
   const value = props.value || DEFAULT_OPTIONS;
   return <Form className="options">
     <Form.Group>
-      <FloatingLabel controlId={"numberOfLocations"} label={"Number of items (default: 5)"}>
+      <FloatingLabel controlId={"numberOfLocations"} label={`Number of items (default: ${DEFAULT_OPTIONS.numberOfItems})`}>
         <URLLinkedInput value={value.numberOfItems}
                         type={"number"}
                         onChange={(e) => {
@@ -79,7 +79,7 @@ export function OptionSelector(props: {
       </FloatingLabel>
     </Form.Group>
     <Form.Group>
-      <FloatingLabel controlId={"numberOfLocations"} label={"Number of locations (default: 10)"}>
+      <FloatingLabel controlId={"numberOfLocations"} label={`Number of locations (default: ${DEFAULT_OPTIONS.numberOfLocations})`}>
         <URLLinkedInput value={value.numberOfLocations}
                         type={"number"}
                         onChange={(e) => {

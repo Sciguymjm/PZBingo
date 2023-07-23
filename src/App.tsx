@@ -18,10 +18,14 @@ import { Col, Container, Row } from "react-bootstrap";
 import { Footer } from "./Footer";
 import { URLParams } from "./URLParams";
 
+function randomSeed() {
+  return Math.floor(Math.random() * 1000000000);
+}
+
 function App() {
-  const [seed, setSeed] = React.useState(getFromURL(URLParams.SEED, 0));
+  const [seed, setSeed] = React.useState(getFromURL(URLParams.SEED, randomSeed()));
   const areas = [DEFAULT_AREA].concat(getAreas());
-  const [area, setArea] = React.useState(getFromURL(URLParams.AREA, 'All'));
+  const [area, setArea] = React.useState(getFromURL(URLParams.AREA, 'Muldraugh'));
   const [options, setOptions] = React.useState<Options>({
     excludeNever: getFromURL(URLParams.EXCLUDE_MISSIONS, DEFAULT_OPTIONS.excludeNever),
     numberOfItems: getFromURL(URLParams.ITEM_COUNT, DEFAULT_OPTIONS.numberOfItems),
@@ -47,7 +51,7 @@ function App() {
                             setSeed(parseInt(e));
                           }}
                           onClick={() => {
-                            let newSeed = Math.floor(Math.random() * 1000000000);
+                            let newSeed = randomSeed();
                             setSeed(newSeed);
                           }} />
             <br />

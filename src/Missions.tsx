@@ -21,7 +21,6 @@ const getItems = () => {
 export function populateOverallMissions(area: string, seed: number, options: Options) {
   const pois = getPOIs(area);
   const poiPRNG = mulberry32(seed);
-  // sample 10 random pois
   const randomPOIs = [];
   console.log("Adding missions for", options.numberOfLocations, "locations");
   for (let i = 0; i < options.numberOfLocations; i++) {
@@ -36,7 +35,6 @@ export function populateOverallMissions(area: string, seed: number, options: Opt
   }));
   const items = getItems();
   const itemPRNG = mulberry32(seed);
-  // sample 5 random items
   const randomItems = [];
   console.log("Adding missions for", options.numberOfItems, "items");
   for (let i = 0; i < options.numberOfItems; i++) {
