@@ -13,3 +13,11 @@ export function sample<T>(rng: () => number, arr: T[]): T {
   const i = Math.floor(rng() * arr.length);
   return arr[i];
 }
+
+export const onUrlLinkedChange = (onChange: any, urlParam: string) => (e: any) => {
+  const url = new URL(window.location.href);
+  let value = e.target ? e.target.value : e;
+  url.searchParams.set(urlParam, value);
+  window.history.replaceState({}, '', url.toString());
+  onChange(value);
+};

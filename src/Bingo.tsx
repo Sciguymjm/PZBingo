@@ -1,5 +1,6 @@
 import { mulberry32, sample } from "./Utils";
 import React from "react";
+import './Bingo.css';
 
 interface Mission {
   name: string;
@@ -14,7 +15,7 @@ interface BingoProps {
 
 function BingoCell(props: { mission: Mission }) {
   const [showDescription, setShowDescription] = React.useState(false);
-  const [completed, setCompleted] = React.useState(false);
+  const [completed, setCompleted] = React.useState(props.mission.name.toLowerCase().startsWith("never"));
   return <>
     <td className="mission"
         onMouseEnter={() => setShowDescription(true)}
@@ -23,13 +24,13 @@ function BingoCell(props: { mission: Mission }) {
         style={{ backgroundColor: completed ? 'green' : 'inherit' }}
     >
       <div className="missionName">{props.mission.name}</div>
-      <div className="missionDescription"
-           onClick={e => e.stopPropagation()}
-           style={{ display: showDescription ? 'block' : 'none' }}
+      {props.mission.description && <div className="missionDescription"
+                                         onClick={e => e.stopPropagation()}
+                                         style={{ display: showDescription ? 'block' : 'none' }}
       >
         {props.mission.description} {props.mission.link &&
-        <a href={props.mission.link} target="_blank" rel="noreferrer">Map</a>}
-      </div>
+        <a href={props.mission.link} target="_blank" rel="noreferrer">Link</a>}
+      </div>}
     </td>
   </>;
 }

@@ -1,6 +1,7 @@
-import OVERLAYS from "./overlays.json";
+import OVERLAYS from "./data/overlays.json";
 import { mulberry32, sample } from "./Utils";
-import MISSIONS from "./missions.json";
+import MISSIONS from "./data/missions.json";
+import ITEMS from "./data/items.json";
 import { DEFAULT_AREA } from "./Selectors";
 
 const getPOIs = (area: string = DEFAULT_AREA, zoomLevel: number = 2000) => {
@@ -11,6 +12,10 @@ const getPOIs = (area: string = DEFAULT_AREA, zoomLevel: number = 2000) => {
       name: `${poi.name} (${area.name})`,
       url: `https://map.projectzomboid.com/#${poi.x}x${poi.y}x${zoomLevel}`
     })));
+};
+
+const getItems = () => {
+  return ITEMS;
 };
 
 export function populateOverallMissions(area: string, seed: number) {
@@ -25,8 +30,22 @@ export function populateOverallMissions(area: string, seed: number) {
   // add "Clear <location>" missions to total missions
   const CLEAR_MISSIONS = randomPOIs.map(poi => ({
     name: `Clear ${poi.name}`,
-    description: `Clear ${poi.name}`,
+    description: ` `,
     link: poi.url
   }));
-  return MISSIONS.concat(CLEAR_MISSIONS);
+  const items = getItems();
+  const itemPRNG = mulberry32(seed);
+  // sample 5 random items
+  const randomItems = [];
+  for (let i = 0; i < 5; i++) {
+    const item = sample(itemPRNG, items);
+    randomItems.push(item);
+  }
+  const ITEM_MISSIONS = randomItems.map(item => ({
+    name: `Obtain ${item}.`,
+    description: ``,
+  }));
+
+
+  return MISSIONS.concat(CLEAR_MISSIONS).concat(ITEM_MISSIONS);
 }

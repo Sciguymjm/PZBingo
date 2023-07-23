@@ -1,0 +1,10 @@
+[
+  {
+    "question": "How does this work?",
+    "answer": "Click 'Random' to get a random bingo board. If you want to share the board, use 'Copy URL' or copy the URL from your address bar. The same board will be generated every time you visit that URL."
+  },
+  {
+    "question": "Why are some missions completed already?",
+    "answer": "Some missions are 'never' missions, i.e. you need to NOT do that action to complete the square. If you do it, then you lose that square permanently. Toggle those missions in the options."
+  }
+]

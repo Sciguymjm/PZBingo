@@ -1,5 +1,8 @@
-import React from "react";
-import OVERLAYS from "./overlays.json";
+import React, { useEffect } from "react";
+import OVERLAYS from "./data/overlays.json";
+import Form from 'react-bootstrap/Form';
+import { Button, FloatingLabel, FormControlProps, FormSelectProps } from "react-bootstrap";
+import { onUrlLinkedChange } from "./Utils";
 
 export const DEFAULT_AREA = 'All';
 export const getAreas = () => {
@@ -11,46 +14,78 @@ export function AreaSelector(props: {
   onChange: (e: any) => void,
   areaNames: string[]
 }) {
-  return <div className={"area"}>
-    <label htmlFor="area">Area:</label>
-    <select id="area" value={props.value} onChange={props.onChange}>
-      {props.areaNames.map(area => <option key={area} value={area}>{area}</option>)}
-    </select>
-  </div>;
+  return <Form className={"area"}>
+    <Form.Group>
+      <FloatingLabel controlId={"area"} label={"Area"}>
+        <URLLinkedSelect defaultValue={"All"} urlParam={"area"} value={props.value} onChange={props.onChange}>
+          {props.areaNames.map(area => <option key={area} value={area}>{area}</option>)}
+        </URLLinkedSelect>
+      </FloatingLabel>
+    </Form.Group>
+  </Form>;
 }
 
 export function SeedSelector(props: { value: number, onChange: (e: any) => void, onClick: () => void }) {
-  return <div className="seed">
-    <label htmlFor="seed">Seed:</label>
-    <input type="number" id="seed" value={props.value} onChange={props.onChange} />
-    <button onClick={props.onClick}>Random</button>
-    <button onClick={() => navigator.clipboard.writeText(
-      `${window.location.href}`
-    )}>Copy URL
-    </button>
-  </div>;
+  return <Form className="seed">
+    <Form.Group>
+      <FloatingLabel controlId={"seed"} label={"Seed"}>
+        <URLLinkedInput type="number" value={props.value} defaultValue={"0"} onChange={props.onChange}
+                        urlParam={"seed"} />
+      </FloatingLabel>
+      <Button onClick={props.onClick}>Generate New Seed</Button>
+      <Button onClick={() => navigator.clipboard.writeText(
+        `${window.location.href}`
+      )}>
+        Copy URL
+      </Button>
+    </Form.Group>
+  </Form>;
 }
 
-export const getSeedFromURL = () => {
+export const getFromURL = <T, >(paramName: string, defaultValue: T) => {
   const url = new URL(window.location.href);
-  const seed = url.searchParams.get('seed');
-  return seed ? parseInt(seed) : 0;
+  const value = url.searchParams.get(paramName);
+  if (value) {
+    // if T is a number, parse it as a number
+    if (typeof defaultValue === 'number') {
+      return parseInt(value) as unknown as T;
+    }
+    return value as unknown as T;
+  }
+  return defaultValue;
 };
-export const getAreaFromURL = () => {
-  const url = new URL(window.location.href);
-  const area = url.searchParams.get('area');
-  return area || DEFAULT_AREA;
+
+interface URLLinkedInputProps extends FormControlProps {
+  urlParam: string;
+  defaultValue: string;
+  onChange: (e: any) => void;
+}
+
+const URLLinkedInput = (props: URLLinkedInputProps) => {
+  const { onChange, children, defaultValue, urlParam, ...rest } = props;
+  useEffect(() => {
+    onUrlLinkedChange(() => {
+    }, urlParam)(props.value);
+  }, [props.value, urlParam]);
+  return <Form.Control {...rest}
+                       onChange={onUrlLinkedChange(onChange, urlParam)}
+  >{children}</Form.Control>;
 };
 
-export function setAreaURLParam(e: any) {
-  const url = new URL(window.location.href);
-  url.searchParams.set('area', e);
-  window.history.replaceState({}, '', url.toString());
+interface URLLinkedSelectProps extends FormSelectProps {
+  urlParam: string;
+  defaultValue: string;
+  onChange: (e: any) => void;
 }
 
-export function setSeedURLParam(newSeed: number) {
-  const url = new URL(window.location.href);
-  url.searchParams.set('seed', newSeed.toString());
-  window.history.replaceState({}, '', url.toString());
-}
+const URLLinkedSelect = (props: URLLinkedSelectProps) => {
+  const { onChange, children, defaultValue, urlParam, ...rest } = props;
+  useEffect(() => {
+    onUrlLinkedChange(() => {
+    }, urlParam)(props.value);
+  }, [props.value, urlParam]);
+  return <Form.Select {...rest}
+                      onChange={onUrlLinkedChange(onChange, urlParam)}
+  >{children}</Form.Select>;
+};
 

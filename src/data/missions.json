@@ -1,0 +1,226 @@
+[
+  {
+    "name": "Visit a Spiffo's.",
+    "description": ""
+  },
+  {
+    "name": "Kill zombie you.",
+    "description": "Kill your zombified character with another character."
+  },
+  {
+    "name": "Heal from a sickness.",
+    "description": ""
+  },
+  {
+    "name": "Draw a smiley face.",
+    "description": ""
+  },
+  {
+    "name": "Make a bomb.",
+    "description": ""
+  },
+  {
+    "name": "Hold 7 radios at once.",
+    "description": ""
+  },
+  {
+    "name": "Build a tent.",
+    "description": ""
+  },
+  {
+    "name": "Survive 7 days.",
+    "description": ""
+  },
+  {
+    "name": "Drive for at least 5 seconds.",
+    "description": ""
+  },
+  {
+    "name": "Disassemble a bathroom.",
+    "description": ""
+  },
+  {
+    "name": "Carry 50 pairs of socks at once.",
+    "description": ""
+  },
+  {
+    "name": "Wear a piece of military clothing.",
+    "description": ""
+  },
+  {
+    "name": "Get every map (14 total).",
+    "description": ""
+  },
+  {
+    "name": "100 kills.",
+    "description": ""
+  },
+  {
+    "name": "Take apart a car.",
+    "description": ""
+  },
+  {
+    "name": "Get 7 in a skill.",
+    "description": ""
+  },
+  {
+    "name": "Build a house.",
+    "description": "Can be 1x1"
+  },
+  {
+    "name": "Fish a fish.",
+    "description": ""
+  },
+  {
+    "name": "Wear aviators.",
+    "description": ""
+  },
+  {
+    "name": "Eat an entire bacon stir fry.",
+    "description": ""
+  },
+  {
+    "name": "Bring a generator home.",
+    "description": ""
+  },
+  {
+    "name": "Consume 5 different types of alcoholic beverages.",
+    "description": ""
+  },
+  {
+    "name": "Kill 10 zombies with stealth kills.",
+    "description": ""
+  },
+  {
+    "name": "Cultivate a garden with at least 3 different crops.",
+    "description": ""
+  },
+  {
+    "name": "Cook a meal that has 5 different fresh ingredients.",
+    "description": "Non-perishable but fresh works (herbs)"
+  },
+  {
+    "name": "Amass a collection of 50 unique items in one container.",
+    "description": ""
+  },
+  {
+    "name": "Drink bleach.",
+    "description": ""
+  },
+  {
+    "name": "Find a generator magazine.",
+    "description": ""
+  },
+  {
+    "name": "Find a car with the key inside.",
+    "description": ""
+  },
+  {
+    "name": "Kill a zombie with a blade stuck in them.",
+    "description": "Long Bladed: Katana, Machete\nShort Bladed: Knife Butter, Knife Butter, Fork, Gardening Fork, Hand Scythe, Hunting Knife, Ice Pick, Kitchen Knife, Letter Opener, Cleaver, Scalpel, Scissors, Screwdriver, Broken Bottle, Spoon, Stake, Stone Knife"
+  },
+  {
+    "name": "Plumb a sink.",
+    "description": ""
+  },
+  {
+    "name": "Reach 80mph.",
+    "description": ""
+  },
+  {
+    "name": "Survive 4 lacerations.",
+    "description": ""
+  },
+  {
+    "name": "Catch a shoe while fishing.",
+    "description": ""
+  },
+  {
+    "name": "Sleep in a bed with HottieZ and tissues in the bedside table.",
+    "description": ""
+  },
+  {
+    "name": "Store 100 units of non-perishable food",
+    "description": "Canned goods, dry pasta, etc."
+  },
+  {
+    "name": "Trap three types of animals in traps.",
+    "description": "Different types, using any means necessary (snares or cage traps)"
+  },
+  {
+    "name": "Catch 3 fish types.",
+    "description": "Bass, catfish, crappie, etc."
+  },
+  {
+    "name": "Never use an axe.",
+    "description": "Hand, wood, stone or two-handed. Pickaxe is ok."
+  },
+  {
+    "name": "Never craft or repair a weapon.",
+    "description": ""
+  },
+  {
+    "name": "Never cook any meals.",
+    "description": "Meals you find cooked are okay."
+  },
+  {
+    "name": "Never use any firearms.",
+    "description": ""
+  },
+  {
+    "name": "Never use beds to sleep or pass the night.",
+    "description": ""
+  },
+  {
+    "name": "Never rip any clothing items or fabric.",
+    "description": ""
+  },
+  {
+    "name": "Never trip.",
+    "description": ""
+  },
+  {
+    "name": "Never use a backpack.",
+    "description": ""
+  },
+  {
+    "name": "Never use a handheld container.",
+    "description": "Briefcases, bags, coolers, lunchboxes."
+  },
+  {
+    "name": "Set off a house alarm.",
+    "description": ""
+  },
+  {
+    "name": "Start a fire.",
+    "description": ""
+  },
+  {
+    "name": "Deconstruct all of the furniture in a house.",
+    "description": "Free-standing house only. This includes all furniture: beds, dining, shelves but nothing in the kitchen."
+  },
+  {
+    "name": "Contract a cold.",
+    "description": ""
+  },
+  {
+    "name": "Die.",
+    "description": ""
+  },
+  {
+    "name": "Get plastered.",
+    "description": "Literally. The moodle called 'plastered'. 50%+ drunk."
+  },
+  {
+    "name": "Become soaking wet.",
+    "description": "Literally. The moodle called 'Soaking'. 70% total body wetness."
+  },
+  {
+    "name": "Become full to bursting.",
+    "description": "The moodle called 'Full to Bursting'."
+  },
+  {
+    "name": "Become queasy.",
+    "description": ""
+  }
+]
