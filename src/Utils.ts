@@ -15,9 +15,22 @@ export function sample<T>(rng: () => number, arr: T[]): T {
 }
 
 export const onUrlLinkedChange = (onChange: any, urlParam: string) => (e: any) => {
+  if (e === undefined) {
+    console.log("e is undefined");
+    return;
+  }
   const url = new URL(window.location.href);
-  let value = e.target ? e.target.value : e;
-  url.searchParams.set(urlParam, value);
+  let value: any;
+  if (e.target) {
+    if (e.target.type === "checkbox") {
+      value = e.target.checked || false;
+    } else {
+      value = e.target.value;
+    }
+  } else {
+    value = e;
+  }
+  url.searchParams.set(urlParam, value.toString());
   window.history.replaceState({}, '', url.toString());
   onChange(value);
 };

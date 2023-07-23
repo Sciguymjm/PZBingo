@@ -2,7 +2,7 @@ import OVERLAYS from "./data/overlays.json";
 import { mulberry32, sample } from "./Utils";
 import MISSIONS from "./data/missions.json";
 import ITEMS from "./data/items.json";
-import { DEFAULT_AREA } from "./Selectors";
+import { DEFAULT_AREA, Options } from "./Selectors";
 
 const getPOIs = (area: string = DEFAULT_AREA, zoomLevel: number = 2000) => {
   // return all of the POI names from OVERLAYS, as well as their PZ map coordinates as a url,
@@ -18,12 +18,13 @@ const getItems = () => {
   return ITEMS;
 };
 
-export function populateOverallMissions(area: string, seed: number) {
+export function populateOverallMissions(area: string, seed: number, options: Options) {
   const pois = getPOIs(area);
   const poiPRNG = mulberry32(seed);
   // sample 10 random pois
   const randomPOIs = [];
-  for (let i = 0; i < 10; i++) {
+  console.log("Adding missions for", options.numberOfLocations, "locations");
+  for (let i = 0; i < options.numberOfLocations; i++) {
     const poi = sample(poiPRNG, pois);
     randomPOIs.push(poi);
   }
@@ -37,7 +38,8 @@ export function populateOverallMissions(area: string, seed: number) {
   const itemPRNG = mulberry32(seed);
   // sample 5 random items
   const randomItems = [];
-  for (let i = 0; i < 5; i++) {
+  console.log("Adding missions for", options.numberOfItems, "items");
+  for (let i = 0; i < options.numberOfItems; i++) {
     const item = sample(itemPRNG, items);
     randomItems.push(item);
   }
@@ -47,5 +49,5 @@ export function populateOverallMissions(area: string, seed: number) {
   }));
 
 
-  return MISSIONS.concat(CLEAR_MISSIONS).concat(ITEM_MISSIONS);
+  return MISSIONS.filter(mission => !options.excludeNever || !mission.name.toLowerCase().startsWith("never")).concat(CLEAR_MISSIONS).concat(ITEM_MISSIONS);
 }

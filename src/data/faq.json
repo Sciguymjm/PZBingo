@@ -6,5 +6,9 @@
   {
     "question": "Why are some missions completed already?",
     "answer": "Some missions are 'never' missions, i.e. you need to NOT do that action to complete the square. If you do it, then you lose that square permanently. Toggle those missions in the options."
+  },
+  {
+    "question": "How do I suggest new missions?",
+    "answer": "Make a PR in the GitHub repo below and edit the 'missions.json' or 'items.json' files in the src/data/ folder. You can edit directly on the GitHub website for those files. If you don't know how to do that, you can also just open an issue and someone might add it for you."
   }
 ]

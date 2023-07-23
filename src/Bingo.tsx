@@ -1,6 +1,7 @@
 import { mulberry32, sample } from "./Utils";
 import React from "react";
 import './Bingo.css';
+import { Options } from "./Selectors";
 
 interface Mission {
   name: string;
@@ -11,6 +12,7 @@ interface Mission {
 interface BingoProps {
   missions: Mission[];
   seed?: number;
+  options: Options;
 }
 
 function BingoCell(props: { mission: Mission }) {
@@ -42,8 +44,7 @@ export function BingoBoard(props: BingoProps) {
   for (let i = 0; i < 5; i++) {
     const cols = [];
     for (let j = 0; j < 5; j++) {
-      // free space
-      if (i === 2 && j === 2) {
+      if (i === 2 && j === 2 && props.options.freeSpace) {
         cols.push(<td key="freeSpace" className="mission" style={{ backgroundColor: 'green' }}>Free Space</td>);
         continue;
       }
