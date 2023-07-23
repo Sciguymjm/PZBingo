@@ -4,7 +4,6 @@ import Form from 'react-bootstrap/Form';
 import { Button, FloatingLabel, FormCheckProps, FormControlProps, FormSelectProps } from "react-bootstrap";
 import { onUrlLinkedChange } from "./Utils";
 import { URLParams } from "./URLParams";
-import { Console } from "inspector";
 
 export const DEFAULT_AREA = 'All';
 export const getAreas = () => {
