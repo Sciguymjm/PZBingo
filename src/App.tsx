@@ -38,11 +38,11 @@ function App() {
     <div className="App">
       <Container className="App-header">
         <Row>
-          <Col xs={2} />
-          <Col xs={6}>
+          <Col lg={2} xs={0}/>
+          <Col lg={6} xs={12}>
             <BingoBoard missions={TOTAL_MISSIONS} seed={seed} options={options} />
           </Col>
-          <Col xs={2}>
+          <Col lg={2} xs={12}>
             <AreaSelector value={area} onChange={e => {
               setArea(e);
             }} areaNames={areas} />
@@ -59,7 +59,7 @@ function App() {
               setOptions(e);
             }} />
           </Col>
-          <Col xs={2} />
+          <Col lg={2} xs={0}/>
         </Row>
         <FAQ />
         <Footer />
